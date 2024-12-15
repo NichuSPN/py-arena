@@ -8,6 +8,7 @@
   - [Table of Contents](#table-of-contents)
   - [Features](#features)
   - [Usage](#usage)
+    - [Using pip to install from Github](#using-pip-to-install-from-github)
     - [Downloading from GitHub](#downloading-from-github)
     - [Initializing API Handlers](#initializing-api-handlers)
   - [API Reference](#api-reference)
@@ -25,6 +26,14 @@
 - Support for callback functions on API requests.
 
 ## Usage
+
+### Using pip to install from Github
+
+To install the latest version directly from GitHub, run:
+
+```bash
+pip install git+https://github.com/NichuSPN/py-arena.git
+```
 
 ### Downloading from GitHub
 

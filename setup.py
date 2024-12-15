@@ -8,7 +8,7 @@ setup(
     description='arena = API and Relational Engine for Network Applications. This package will be a data and api access layer.',
     long_description=open('README.md').read(),  # Optional: Read from a README file
     long_description_content_type='text/markdown',
-    url='https://github.com/nichuspn/arena',  # Replace with your repo URL
+    url='https://github.com/NichuSPN/py-arena',  # Replace with your repo URL
     packages=find_packages(),  # Automatically find packages in the directory
     classifiers=[
         'Programming Language :: Python :: 3',
