@@ -1,5 +1,5 @@
 from .common.sqldb import SQLDB
-import sqlite3
+import importlib
 
 class SQLite(SQLDB):
     """
@@ -19,12 +19,13 @@ class SQLite(SQLDB):
         """
         self.db_file = db_file
         self.connection = None
+        self.sqlite3 = importlib.import_module("sqlite3")
 
     def create_connection(self):
         """
         Creates a connection to the SQLite database.
         """
-        self.connection = sqlite3.connect(self.db_file)
+        self.connection = self.sqlite3.connect(self.db_file)
 
     def close_connection(self):
         """

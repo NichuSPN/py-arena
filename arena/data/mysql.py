@@ -1,5 +1,5 @@
 from .common.sqldb import SQLDB
-import mysql.connector as mysqlConn
+import importlib
 
 class MySQL(SQLDB):
     """
@@ -19,12 +19,13 @@ class MySQL(SQLDB):
         """
         self.config = config
         self.connection = None
+        self.mysqlConn = importlib.import_module("mysql.connector")
 
     def create_connection(self):
         """
         Creates a connection to the MySQL database.
         """
-        self.connection = mysqlConn.connect(**self.config)
+        self.connection = self.mysqlConn.connect(**self.config)
 
     def close_connection(self):
         """
