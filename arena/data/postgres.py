@@ -1,5 +1,5 @@
 from .common.sqldb import SQLDB
-import psycopg2
+import importlib
 
 class Postgres(SQLDB):
     """
@@ -19,12 +19,13 @@ class Postgres(SQLDB):
         """
         self.config = config
         self.connection = None
+        self.psycopg2 = importlib.import_module("psycopg2")
 
     def create_connection(self):
         """
         Creates a connection to the PostgreSQL database.
         """
-        self.connection = psycopg2.connect(**self.config)
+        self.connection = self.psycopg2.connect(**self.config)
 
     def close_connection(self):
         """
