@@ -40,7 +40,9 @@ class APIHandler:
         try:
             response = requests.request(method, url, headers=headers, params=queryParams, json=data)
             response.raise_for_status()
-            return True, response.json()
+            if response.status_code!=204:
+                return True, response.json()
+            return True, None
         except requests.exceptions.RequestException as e:
             return False, str(e)
 
