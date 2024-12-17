@@ -62,10 +62,6 @@ To use the `arena` package, you can download it directly from GitHub. Follow the
    pip install .
    ```
 
-### Initializing API Handlers
-
-You can initialize API handlers using the `initializeAPIsFromConfig` function. Here’s an example:
-
 ## API Reference
 
 ### APIHandler
