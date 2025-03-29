@@ -83,6 +83,9 @@ class SQLDB:
                 return True, result
         except Exception as error:
             if onError:
+                if self.connection:
+                    self.close_connection()
+                    self.connection = None
                 return onError(error)
             else:
                 return False, error
